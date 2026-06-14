@@ -256,3 +256,47 @@ body::before {
     font-size: 14px;
     color: #bbb;
 }
+
+/* ===== MEMBERS GRID ===== */
+.members-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* MEMBER CARD */
+.member-card {
+    width: 220px;
+    background: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    border-color: #7CFF6B;
+    box-shadow: 0 0 12px rgba(124,255,107,0.15);
+}
+
+.member-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #7CFF6B;
+}
+
+.member-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.member-rank {
+    font-size: 13px;
+    color: #7CFF6B;
+    margin-top: 5px;
+}
