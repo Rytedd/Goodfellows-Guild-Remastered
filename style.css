@@ -79,3 +79,20 @@ h1, h2 {
     width: 100%;
     border-radius: 10px;
 }
+
+.discord-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 18px;
+    background: #5865F2; /* Discord blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.discord-button:hover {
+    background: #4752c4;
+    transform: scale(1.05);
+}
