@@ -39,3 +39,40 @@ window.onload = () => {
         });
     }
 };
+
+// ===== MEMBERS DATA (EDIT HERE) =====
+const members = [
+    {
+        name: "You",
+        rank: "Founder",
+        img: "images/member1.jpg"
+    },
+    {
+        name: "Co Leader",
+        rank: "Co-Founder",
+        img: "images/member2.jpg"
+    },
+    {
+        name: "Admin Guy",
+        rank: "Admin",
+        img: "images/member3.jpg"
+    }
+];
+
+// ===== LOAD MEMBERS =====
+window.addEventListener("load", () => {
+
+    const container = document.getElementById("membersGrid");
+
+    if (container) {
+        members.forEach(m => {
+            container.innerHTML += `
+                <div class="member-card">
+                    <img src="${m.img}" />
+                    <div class="member-name">${m.name}</div>
+                    <div class="member-rank">${m.rank}</div>
+                </div>
+            `;
+        });
+    }
+});
