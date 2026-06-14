@@ -1,29 +1,19 @@
 // 🎥 ADD VIDEOS HERE
 const videos = [
-    {
-        file: "videos/guild-video.mp4",
-        title: "The system was never designed for you to win."
-    },
-    {
-        file: "videos/sample2.mp4",
-        title: "Battle Highlights"
-    }
+    { file: "videos/guild-video.mp4", title: "The system was never designed for you to win." },
+    { file: "videos/sample2.mp4", title: "Memorial" }
 ];
+
 
 // 🖼️ ADD IMAGES HERE
 const images = [
-    {
-        file: "images/flag.png",
-        title: "Our national flag! (subject to change)"
-    },
-    {
-        file: "images/img2.jpg",
-        title: "Team Screenshot"
-    }
+    { file: "images/flag.png", title: "Our national flag! (subject to change)" },
+    { file: "images/img2.jpg", title: "Team Screenshot" }
 ];
 
 // LOAD GALLERY (ONLY ON GALLERY PAGE)
 window.onload = () => {
+
     const videoContainer = document.getElementById("videoGallery");
     const imageContainer = document.getElementById("imageGallery");
 
