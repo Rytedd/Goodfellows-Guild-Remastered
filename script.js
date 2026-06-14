@@ -1,8 +1,8 @@
 // 🎥 ADD VIDEOS HERE
 const videos = [
     {
-        file: "videos/sample1.mp4",
-        title: "Guild Event 1"
+        file: "videos/guild-video.mp4",
+        title: "The system was never designed for you to win."
     },
     {
         file: "videos/sample2.mp4",
@@ -13,8 +13,8 @@ const videos = [
 // 🖼️ ADD IMAGES HERE
 const images = [
     {
-        file: "images/img1.jpg",
-        title: "Base Design"
+        file: "images/flag.jpg",
+        title: "Our national flag! (subject to change)"
     },
     {
         file: "images/img2.jpg",
