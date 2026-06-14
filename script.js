@@ -43,18 +43,18 @@ window.onload = () => {
 // ===== MEMBERS DATA (EDIT HERE) =====
 const members = [
     {
-        name: "You",
+        name: "@rytedd",
         rank: "Founder",
         img: "images/member1.jpg"
     },
     {
-        name: "Co Leader",
+        name: "@depressedorange",
         rank: "Co-Founder",
         img: "images/member2.jpg"
     },
     {
-        name: "Admin Guy",
-        rank: "Admin",
+        name: "@itskl4us",
+        rank: "Co-Founder",
         img: "images/member3.jpg"
     }
 ];
