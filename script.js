@@ -13,7 +13,7 @@ const videos = [
 // 🖼️ ADD IMAGES HERE
 const images = [
     {
-        file: "images/flag.jpg",
+        file: "images/flag.png",
         title: "Our national flag! (subject to change)"
     },
     {
