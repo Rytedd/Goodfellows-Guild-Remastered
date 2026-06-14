@@ -96,3 +96,117 @@ h1, h2 {
     background: #4752c4;
     transform: scale(1.05);
 }
+
+
+/* ===== GLOBAL ANIMATION BASE ===== */
+body {
+    opacity: 0;
+    animation: pageLoad 0.6s ease forwards;
+}
+
+@keyframes pageLoad {
+    to { opacity: 1; }
+}
+
+/* ===== SOFT ANIMATED BACKGROUND ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(124,255,107,0.08), transparent 40%),
+                radial-gradient(circle at 80% 60%, rgba(124,255,107,0.05), transparent 40%);
+    z-index: -1;
+    animation: bgMove 10s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* ===== IMPROVED CARDS ===== */
+.card {
+    background: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 12px 0;
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #7CFF6B;
+    box-shadow: 0 0 15px rgba(124,255,107,0.15);
+}
+
+/* ===== HERO SECTION (HOME ONLY) ===== */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* ===== DISCORD BUTTON (ENHANCED) ===== */
+.discord-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #5865F2;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.discord-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(88,101,242,0.4);
+}
+
+/* ===== LIVE STATUS BAR ===== */
+.status-bar {
+    background: #151515;
+    border: 1px solid #2a2a2a;
+    padding: 10px;
+    text-align: center;
+    color: #7CFF6B;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* ===== BOTTOM NAV IMPROVED ===== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #0d0d0d;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+}
+
+.bottom-nav a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.bottom-nav a:hover {
+    color: #7CFF6B;
+    transform: translateY(-2px);
+}
