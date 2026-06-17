@@ -1,119 +1,21 @@
+/* ===== BASE ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-bottom: 80px;
     background: #121212;
     color: #e6e6e6;
-}
 
-/* Top content spacing */
-.page {
-    padding: 40px;
-}
-
-/* Header title style */
-h1, h2 {
-    color: #7CFF6B;
-}
-
-/* Cards */
-.card {
-    background: #1c1c1c;
-    border: 1px solid #2a2a2a;
-    border-radius: 12px;
-    padding: 15px;
-    margin: 10px 0;
-    transition: 0.25s ease;
-}
-
-.card:hover {
-    transform: scale(1.03);
-    border-color: #7CFF6B;
-}
-
-/* Bottom navigation (ONLY NAV ON SITE) */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #0d0d0d;
-    border-top: 1px solid #2a2a2a;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-
-    padding: 10px 0 5px 0;
-}
-
-.bottom-nav a {
-    color: #aaa;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.bottom-nav a:hover {
-    color: #7CFF6B;
-    transform: scale(1.1);
-}
-
-/* Gallery scroll section */
-.scroll-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 10px;
-}
-
-.media-card {
-    min-width: 250px;
-    background: #1c1c1c;
-    border-radius: 12px;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.media-card:hover {
-    transform: scale(1.05);
-    border: 1px solid #7CFF6B;
-}
-
-.media-card video,
-.media-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.discord-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 18px;
-    background: #5865F2; /* Discord blue */
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.2s ease;
-}
-
-.discord-button:hover {
-    background: #4752c4;
-    transform: scale(1.05);
-}
-
-
-/* ===== GLOBAL ANIMATION BASE ===== */
-body {
+    padding-bottom: 90px; /* space for fixed bottom nav */
     opacity: 0;
     animation: pageLoad 0.6s ease forwards;
 }
 
+/* fade in */
 @keyframes pageLoad {
     to { opacity: 1; }
 }
 
-/* ===== SOFT ANIMATED BACKGROUND ===== */
+/* background effect */
 body::before {
     content: "";
     position: fixed;
@@ -124,15 +26,19 @@ body::before {
     background: radial-gradient(circle at 20% 20%, rgba(124,255,107,0.08), transparent 40%),
                 radial-gradient(circle at 80% 60%, rgba(124,255,107,0.05), transparent 40%);
     z-index: -1;
-    animation: bgMove 10s infinite alternate ease-in-out;
 }
 
-@keyframes bgMove {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+/* ===== PAGE LAYOUT ===== */
+.page {
+    padding: 40px;
 }
 
-/* ===== IMPROVED CARDS ===== */
+/* headings */
+h1, h2 {
+    color: #7CFF6B;
+}
+
+/* ===== CARDS ===== */
 .card {
     background: #1c1c1c;
     border: 1px solid #2a2a2a;
@@ -148,23 +54,7 @@ body::before {
     box-shadow: 0 0 15px rgba(124,255,107,0.15);
 }
 
-/* ===== HERO SECTION (HOME ONLY) ===== */
-.hero {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-/* ===== DISCORD BUTTON (ENHANCED) ===== */
+/* ===== DISCORD BUTTON ===== */
 .discord-button {
     display: inline-block;
     padding: 12px 20px;
@@ -177,46 +67,54 @@ body::before {
 }
 
 .discord-button:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
     box-shadow: 0 0 15px rgba(88,101,242,0.4);
 }
 
-/* ===== LIVE STATUS BAR ===== */
+/* ===== GITHUB BUTTON ===== */
+.github-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.github-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #aaa;
+}
+
+/* ===== STATUS BAR ===== */
 .status-bar {
     background: #151515;
     border: 1px solid #2a2a2a;
     padding: 10px;
     text-align: center;
     color: #7CFF6B;
-    margin-top: 20px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
-/* ===== BOTTOM NAV IMPROVED ===== */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #0d0d0d;
-    border-top: 1px solid #2a2a2a;
-    display: flex;
-    justify-content: space-around;
-    padding: 12px 0;
-    backdrop-filter: blur(10px);
-}
-
-.bottom-nav a {
-    color: #aaa;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.bottom-nav a:hover {
-    color: #7CFF6B;
-    transform: translateY(-2px);
-}
-
-/* ===== GALLERY SCROLL AREA ===== */
+/* ===== GALLERY ===== */
 .scroll-container {
     display: flex;
     overflow-x: auto;
@@ -224,7 +122,6 @@ body::before {
     padding: 10px 0;
 }
 
-/* Hide scrollbar (clean look) */
 .scroll-container::-webkit-scrollbar {
     height: 6px;
 }
@@ -234,42 +131,38 @@ body::before {
     border-radius: 10px;
 }
 
-/* MEDIA CARD */
 .media-card {
     min-width: 260px;
     background: #1c1c1c;
     border-radius: 12px;
     padding: 10px;
-    transition: 0.25s ease;
     border: 1px solid #2a2a2a;
+    transition: 0.25s ease;
 }
 
 .media-card:hover {
     transform: scale(1.05);
     border-color: #7CFF6B;
-    box-shadow: 0 0 12px rgba(124,255,107,0.15);
 }
 
-.media-card video,
-.media-card img {
+.media-card img,
+.media-card video {
     width: 100%;
     border-radius: 10px;
 }
 
 .media-card p {
-    margin-top: 8px;
-    font-size: 14px;
+    font-size: 13px;
     color: #bbb;
 }
 
-/* ===== MEMBERS GRID ===== */
+/* ===== MEMBERS ===== */
 .members-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-/* MEMBER CARD */
 .member-card {
     width: 220px;
     background: #1c1c1c;
@@ -283,54 +176,31 @@ body::before {
 .member-card:hover {
     transform: translateY(-5px) scale(1.03);
     border-color: #7CFF6B;
-    box-shadow: 0 0 12px rgba(124,255,107,0.15);
 }
 
 .member-card img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
     border: 2px solid #7CFF6B;
 }
 
 .member-name {
-    font-size: 16px;
     font-weight: bold;
 }
 
 .member-rank {
     font-size: 13px;
     color: #7CFF6B;
-    margin-top: 5px;
 }
 
-.github-button {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 12px 20px;
-    background: #000000;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.2s ease;
-}
-
-.github-button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
-
-/* ===== DOWNLOADS GRID ===== */
+/* ===== DOWNLOADS ===== */
 .downloads-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-/* PROJECT CARD */
 .project-card {
     width: 300px;
     background: #1c1c1c;
@@ -343,36 +213,25 @@ body::before {
 .project-card:hover {
     transform: translateY(-6px) scale(1.02);
     border-color: #7CFF6B;
-    box-shadow: 0 0 15px rgba(124,255,107,0.15);
 }
 
-/* IMAGE */
 .project-img {
     width: 100%;
     height: 160px;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #2a2a2a;
 }
 
-/* TITLE */
 .project-title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #fff;
 }
 
-/* DESCRIPTION */
 .project-desc {
     font-size: 13px;
     color: #aaa;
-    margin-bottom: 12px;
-    line-height: 1.4;
 }
 
-/* DOWNLOAD BUTTON */
 .download-btn {
     display: inline-block;
     padding: 10px 14px;
@@ -389,17 +248,42 @@ body::before {
     background: #5eea50;
 }
 
+/* ===== BOTTOM NAV (FIXED CLEAN VERSION) ===== */
 .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: #0d0d0d;
+    border-top: 1px solid #2a2a2a;
+
     display: flex;
-    gap: 10px;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+
+    gap: 18px;
+    padding: 10px 15px;
+    backdrop-filter: blur(10px);
 }
 
+.bottom-nav a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.bottom-nav a:hover {
+    color: #7CFF6B;
+    transform: translateY(-2px);
+}
+
+/* footer inside nav */
 .footer-text {
     width: 100%;
     text-align: center;
     font-size: 11px;
     opacity: 0.6;
-    margin-top: 4px;
+    margin-top: 5px;
 }
