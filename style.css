@@ -383,3 +383,17 @@ body::before {
     transform: scale(1.05);
     background: #5eea50;
 }
+
+.bottom-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    font-size: 11px;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: 6px;
+}
